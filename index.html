@@ -55,11 +55,16 @@
             border: 1px solid #ffa500;
             border-radius: 5px;
         }
+        .chart-description {
+            margin-top: 10px;
+            font-style: italic;
+            color: #333;
+        }
     </style>
 </head>
 <body>
 
-    <h1 class="section-title">Resumen del Dataset</h1>
+    <h1 class="section-title">Análisis Exploratorio de Datos (EDA)</h1>
     <p class="highlight">El dataset contiene <span class="important">35,443 filas</span> y <span class="important">18 columnas</span>. A continuación, se presenta un resumen inicial:</p>
 
     <h2 class="section-title">Columnas Principales</h2>
@@ -145,6 +150,9 @@
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
+  
+    <p class="chart-description">Este dashboard interactivo muestra una visión general del dataset de AirBnb en Buenos Aires. Incluyen métricas para entender la distribución de los datos y sus principales características</p>
+
 
 </body>
 </html>
