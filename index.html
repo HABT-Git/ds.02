@@ -3,10 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listings AirBnb 2024 - Beunos Aires</title>
+    <title>Listings AirBnb 2024 - Buenos Aires</title>
 </head>
 <body>
     <h1>AirBnb</h1>
-<div class='tableauPlaceholder' id='viz1734565267680' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;BuenosAires-Tpfinal_17345648016950&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='BuenosAires-Tpfinal_17345648016950&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;BuenosAires-Tpfinal_17345648016950&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1734565267680');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <p>Bienvenido al análisis de datos de AirBnb en Buenos Aires para el año 2024. Este dashboard interactivo proporciona información detallada sobre las tendencias de alojamientos, precios y más.</p>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen del Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: #f0f8ff;
+            padding: 5px;
+            border-left: 5px solid #003366;
+            margin: 10px 0;
+        }
+
+        .important {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .tabulated {
+            margin-left: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 40px;
+        }
+
+        .observations {
+            background-color: #fef5e7;
+            padding: 10px;
+            border: 1px solid #ffa500;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="section-title">Resumen del Dataset</h1>
+    <p class="highlight">El dataset contiene <span class="important">35,443 filas</span> y <span class="important">18 columnas</span>. A continuación, se presenta un resumen inicial:</p>
+
+    <h2 class="section-title">Columnas Principales</h2>
+    <ul>
+        <li><b>id:</b> Identificador único del listado.</li>
+        <li><b>name:</b> Nombre del listado.</li>
+        <li><b>host_id</b> y <b>host_name:</b> Identificadores y nombres de los anfitriones.</li>
+        <li><b>neighbourhood:</b> Barrio en el que está ubicado el alojamiento.</li>
+        <li><b>latitude</b> y <b>longitude:</b> Coordenadas de ubicación.</li>
+        <li><b>room_type:</b> Tipo de habitación (por ejemplo, Entire home/apt, Private room).</li>
+        <li><b>price:</b> Precio por noche (<span class="important">algunos valores faltantes</span>).</li>
+        <li><b>minimum_nights:</b> Noches mínimas de estadía.</li>
+        <li><b>number_of_reviews:</b> Número total de reseñas.</li>
+        <li><b>last_review:</b> Fecha de la última reseña (<span class="important">valores faltantes</span>).</li>
+        <li><b>reviews_per_month:</b> Promedio de reseñas por mes.</li>
+        <li><b>availability_365:</b> Días disponibles en un año.</li>
+        <li><b>license:</b> Licencia del alojamiento (<span class="important">mayoría de valores faltantes</span>).</li>
+    </ul>
+
+    <h2 class="section-title">Observaciones Importantes</h2>
+    <div class="observations">
+        <h3>Faltantes:</h3>
+        <ul>
+            <li><b>price:</b> Tiene datos faltantes (~10%).</li>
+            <li><b>last_review</b> y <b>reviews_per_month:</b> También tienen valores ausentes.</li>
+            <li><b>neighbourhood_group:</b> Está completamente vacío.</li>
+            <li><b>license:</b> Tiene muy pocos registros (~1%).</li>
+        </ul>
+
+        <h3>Variables Clave:</h3>
+        <ul>
+            <li><b>price:</b> Muestra valores altos y outliers significativos (promedio ≈ 92,326, pero con valores máximos superiores a 10 millones).</li>
+        </ul>
+
+        <h3>Variables Geográficas:</h3>
+        <ul>
+            <li><b>latitude</b> y <b>longitude:</b> Permiten crear mapas interactivos.</li>
+        </ul>
+
+        <h3>Categorías:</h3>
+        <ul>
+            <li><b>neighbourhood:</b> Útil para segmentaciones por barrio.</li>
+            <li><b>room_type:</b> Ayuda a categorizar listados por tipo de alojamiento.</li>
+        </ul>
+    </div>
+    <div class='tableauPlaceholder' id='viz1734565267680' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;BuenosAires-Tpfinal_17345648016950&#47;Dashboard2&#47;1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='BuenosAires-Tpfinal_17345648016950&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;BuenosAires-Tpfinal_17345648016950&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='es-ES' />
+            <param name='filter' value='publish=yes' />
+        </object>
+    </div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1734565267680');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if ( divElement.offsetWidth > 800 ) { 
+            vizElement.style.width='100%';
+            vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } else if ( divElement.offsetWidth > 500 ) { 
+            vizElement.style.width='100%';
+            vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } else { 
+            vizElement.style.width='100%';
+            vizElement.style.height='1127px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
 </body>
-</html> 
+</html>
+
