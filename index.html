@@ -186,6 +186,42 @@
 .header-list li {
     margin-top: 5px;
 }
+
+/* Estilo para la sección de hallazgos */
+.hallazgos {
+    background-color: #f7f9fc;
+    border: 2px solid #007acc;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    color: #003366;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hallazgos-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #005a9c;
+}
+
+.hallazgos-item {
+    margin-bottom: 20px;
+}
+
+.hallazgos-item-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #002a4d;
+    margin-bottom: 5px;
+}
+
+.hallazgos-item-content {
+    margin-left: 15px;
+    font-size: 1.1em;
+}
+
       
     </style>
 </head>
@@ -380,6 +416,69 @@
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
+
+
+
+    /* Agregado de texto para hallazgos */
+<div class="hallazgos">
+    <div class="hallazgos-title">Hallazgos y Conclusiones Relevantes</div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">1. Zonas con Mayor Cantidad de Propiedades Disponibles</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> Los barrios de Palermo, Recoleta y San Telmo destacan por tener la mayor cantidad de propiedades listadas en Airbnb.<br>
+            <b>Interpretación:</b> Estas áreas son populares entre los anfitriones, posiblemente debido a su atractivo turístico y demanda constante por parte de los visitantes.
+        </div>
+    </div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">2. Precio Promedio por Noche en Diferentes Barrios</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> Los precios promedio por noche varían significativamente entre barrios. Por ejemplo, Puerto Madero y Recoleta presentan precios más elevados en comparación con La Boca o Constitución.<br>
+            <b>Interpretación:</b> Los barrios con mayor desarrollo económico y atractivo turístico tienden a tener precios más altos, reflejando la disposición de los huéspedes a pagar más por ubicaciones premium.
+        </div>
+    </div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">3. Relación entre Número de Reseñas y Precio</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> No se observa una correlación directa y fuerte entre el número de reseñas y el precio de las propiedades.<br>
+            <b>Interpretación:</b> El número de reseñas puede estar más relacionado con la duración en la que la propiedad ha estado activa en la plataforma y su tasa de ocupación, más que con su precio.
+        </div>
+    </div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">4. Propiedades más Populares por Barrio</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> Barrios como Palermo y San Telmo cuentan con propiedades que acumulan un mayor número de reseñas, indicando alta rotación de huéspedes.<br>
+            <b>Interpretación:</b> Estas zonas son preferidas por los turistas, posiblemente debido a su vida nocturna, oferta cultural y gastronómica.
+        </div>
+    </div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">5. Propiedades más Caras y su Ubicación</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> Las propiedades con los precios más elevados se encuentran predominantemente en Puerto Madero y Recoleta.<br>
+            <b>Interpretación:</b> Estas áreas exclusivas ofrecen alojamientos de lujo, justificando tarifas más altas debido a las comodidades y ubicación privilegiada.
+        </div>
+    </div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">6. Distribución de Precios según el Tipo de Propiedad</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> Las casas completas presentan una mayor variabilidad y rangos de precios más altos en comparación con habitaciones privadas o compartidas.<br>
+            <b>Interpretación:</b> Los huéspedes están dispuestos a pagar más por la privacidad y comodidad de una propiedad completa, mientras que las habitaciones ofrecen opciones más económicas.
+        </div>
+    </div>
+
+    <div class="hallazgos-item">
+        <div class="hallazgos-item-title">7. Top 10 de Anfitriones por Tipo de Propiedad</div>
+        <div class="hallazgos-item-content">
+            <b>Hallazgo:</b> Algunos anfitriones gestionan múltiples propiedades, especialmente en categorías de casas completas en barrios céntricos.<br>
+            <b>Interpretación:</b> Existe una presencia de anfitriones profesionales o empresas que operan varias propiedades, influyendo en la dinámica del mercado de alquileres a corto plazo.
+        </div>
+    </div>
+</div>
 
     <div class="conclusions">
     <div class="conclusions-title">Conclusiones Generales</div>
