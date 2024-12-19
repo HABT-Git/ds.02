@@ -60,6 +60,56 @@
             font-style: italic;
             color: #333;
         }
+        .questions {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .question-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .question-list {
+            list-style-type: decimal;
+            margin-left: 30px;
+        }
+
+        .question-list li {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .question-list li::marker {
+            color: #cc0000;
+        }
+      /* Resaltar palabras clave dentro de las preguntas */
+        .question-key {
+            font-weight: bold;
+            color: #003366;
+        }
+
+    /* Ajustes responsivos para pantallas más pequeñas */
+    @media (max-width: 600px) {
+        .questions {
+            padding: 15px;
+        }
+
+        .question-title {
+            font-size: 1.3em;
+        }
+
+        .question-list li {
+            font-size: 1em;
+        }
+    }
+      
     </style>
 </head>
 <body>
@@ -151,9 +201,64 @@
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
   
-    <p class="chart-description">Este dashboard interactivo muestra una visión general del dataset de AirBnb en Buenos Aires. Incluyen métricas para entender la distribución de los datos y sus principales características</p>
+    <p class="chart-description">Este dashboard interactivo muestra una visión general de los listados de AirBnb en Buenos Aires. Incluye métricas clave como precios, tipos de habitaciones y disponibilidad anual. Úsalo para analizar datos geográficos y categóricos.</p>
 
+        <div class='tableauPlaceholder' id='viz1734570934853' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/Bu/BuenosAires-Tpfinal_Dash1/Dashboard1/1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='BuenosAires-Tpfinal_Dash1/Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Bu/BuenosAires-Tpfinal_Dash1/Dashboard1/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='es-ES' />
+            <param name='filter' value='publish=yes' />
+        </object>
+    </div>
+    <p class="chart-description">Este gráfico muestra el desglose inicial de datos categorizados por barrios y tipos de alojamiento en Buenos Aires.</p>
 
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1734570934853');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if ( divElement.offsetWidth > 800 ) { 
+            vizElement.style.width='100%';
+            vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } else if ( divElement.offsetWidth > 500 ) { 
+            vizElement.style.width='100%';
+            vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } else { 
+            vizElement.style.width='100%';
+            vizElement.style.height='1227px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+  /* Agregado de texto en HTML */
+    <div class="questions">
+      <div class="question-title">Preguntas Clave</div>
+      <ol class="question-list">
+          <li>¿Qué zonas tienen la mayor cantidad de propiedades disponibles?</li>
+          <li>¿Cuál es el precio promedio por noche en diferentes barrios o zonas?</li>
+          <li>Relación entre Número de Reseñas y Precio: Explorar si las propiedades con más reseñas tienden a tener precios más altos o más bajos.</li>
+          <li>Propiedades más Populares por Barrio: Identificar los barrios con propiedades más populares (mayor cantidad de reseñas acumuladas).</li>
+          <li>¿Cuáles son las propiedades más caras y dónde están ubicadas? Identificar las propiedades con el precio más alto y sus ubicaciones geográficas.</li>
+          <li>¿Cómo se distribuyen los precios según el tipo de propiedad? Visualizar la dispersión de precios dentro de cada tipo de propiedad.</li>
+          <li>Top 10 de Host por Tipo.</li>
+      </ol>
+    </div>
+  
 </body>
 </html>
-
