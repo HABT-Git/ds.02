@@ -109,6 +109,37 @@
             font-size: 1em;
         }
     }
+        .conclusions {
+    background-color: #eef7f9;
+    border: 1px solid #007acc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #003366;
+}
+
+.conclusions-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.conclusions-list {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+.conclusions-list li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.conclusions-footer {
+    margin-top: 15px;
+    font-style: italic;
+    text-align: center;
+}
       
     </style>
 </head>
@@ -304,6 +335,17 @@
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
-    
+    <div class="conclusions">
+    <div class="conclusions-title">Conclusiones Generales</div>
+    <ul class="conclusions-list">
+        <li>El análisis proporciona una comprensión profunda de la oferta de alojamientos en Buenos Aires, destacando las zonas con mayor disponibilidad, variaciones de precios por barrio y tipo de propiedad, y patrones de popularidad basados en las reseñas de los huéspedes.</li>
+        <li>La identificación de outliers en los precios sugiere la necesidad de un análisis más detallado para comprender las razones detrás de estas discrepancias, como la presencia de propiedades de lujo o posibles errores en los datos.</li>
+        <li>La falta de datos en ciertas columnas, como neighbourhood_group y license, indica áreas donde la calidad del dataset podría mejorarse para futuros análisis.</li>
+    </ul>
+    <div class="conclusions-footer">
+        Este dashboard interactivo sirve como una herramienta valiosa para explorar y visualizar las tendencias de alojamiento en Buenos Aires, facilitando la toma de decisiones informadas para anfitriones, huéspedes y analistas del mercado turístico.
+    </div>
+</div>
+
 </body>
 </html>
